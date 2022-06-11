@@ -142,7 +142,9 @@ class _HomePageState extends State<HomePage> {
                         Text(
                           AppString.rangeAssistant,
                           style: TextStyle(
-                              color: AppColors.textcolor, fontSize: 9.sp),
+                            color: AppColors.textcolor,
+                            fontSize: 9.sp,
+                          ),
                         )
                       ],
                     ),
