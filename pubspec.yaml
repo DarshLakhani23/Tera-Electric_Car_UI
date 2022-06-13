@@ -50,6 +50,7 @@ dev_dependencies:
   sizer: ^2.0.15
   intl: ^0.17.0
   flutter_launcher_icons: ^0.9.3
+  url_launcher: ^6.1.3
 
 flutter_icons:
   android: "launcher_icon"

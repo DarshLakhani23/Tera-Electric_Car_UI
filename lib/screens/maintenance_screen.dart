@@ -2,7 +2,7 @@ import 'package:carapp/utils/app_string.dart';
 import 'package:carapp/utils/assets_utils.dart';
 import 'package:carapp/utils/colors_utils.dart';
 import 'package:carapp/widget/custom_appbar.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:carapp/widget/url_launcher.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
@@ -83,28 +83,33 @@ class MaintenancePage extends StatelessWidget {
               SizedBox(
                 height: 2.h,
               ),
-              Container(
-                padding: EdgeInsets.symmetric(vertical: 1.h),
-                decoration: BoxDecoration(
-                  color: Colors.white12,
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: ListTile(
-                  title: Text(
-                    AppString.assistance,
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 10.sp),
+              GestureDetector(
+                onTap: () {
+                  launchUrl("tel:+(413)-273-11331");
+                },
+                child: Container(
+                  padding: EdgeInsets.symmetric(vertical: 1.h),
+                  decoration: BoxDecoration(
+                    color: Colors.white12,
+                    borderRadius: BorderRadius.circular(15),
                   ),
-                  //tileColor: Colors.white,
-                  leading: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: SvgPicture.asset(ImageAsset.assistance),
-                  ),
-                  subtitle: Text(
-                    AppString.phoneNumber,
-                    style: TextStyle(color: Colors.white, fontSize: 8.sp),
+                  child: ListTile(
+                    title: Text(
+                      AppString.assistance,
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 10.sp),
+                    ),
+                    //tileColor: Colors.white,
+                    leading: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: SvgPicture.asset(ImageAsset.assistance),
+                    ),
+                    subtitle: Text(
+                      AppString.phoneNumber,
+                      style: TextStyle(color: Colors.white, fontSize: 8.sp),
+                    ),
                   ),
                 ),
               ),

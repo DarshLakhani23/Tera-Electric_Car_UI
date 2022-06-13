@@ -5,11 +5,14 @@ import 'package:carapp/utils/colors_utils.dart';
 import 'package:carapp/widget/custom_appbar.dart';
 import 'package:carapp/widget/first_view_of_your_miracle.dart';
 import 'package:carapp/widget/maintainance_view_your_miracle.dart';
+import 'package:carapp/widget/url_launcher.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
+
+import '../utils/navigation_utils/navigation.dart';
 
 class YourMiracle extends StatefulWidget {
   const YourMiracle({Key? key}) : super(key: key);
@@ -104,9 +107,14 @@ class _YourMiracleState extends State<YourMiracle> {
                               ),
                             ),
                             _battery(),
-                            const Maintenance(
-                              text: AppString.maintenance,
-                              svgImage: ImageAsset.maintenance,
+                            GestureDetector(
+                              onTap: () {
+                                launchUrl("tel:+(413)-273-11331");
+                              },
+                              child: const Maintenance(
+                                text: AppString.maintenance,
+                                svgImage: ImageAsset.maintenance,
+                              ),
                             )
                           ],
                         ),
@@ -129,9 +137,14 @@ class _YourMiracleState extends State<YourMiracle> {
                               smallText: AppString.turnOff,
                             ),
                             _temperature(),
-                            const Maintenance(
-                              text: AppString.about,
-                              svgImage: ImageAsset.about,
+                            GestureDetector(
+                              onTap: () {
+                                Get.toNamed(Routes.aboutPage);
+                              },
+                              child: const Maintenance(
+                                text: AppString.about,
+                                svgImage: ImageAsset.about,
+                              ),
                             )
                           ],
                         ),
