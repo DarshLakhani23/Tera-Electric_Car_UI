@@ -107,11 +107,6 @@ class _ProfileState extends State<Profile> {
                       ),
                       CustomTextField(
                         readOnly: false,
-                        validation: (value) {
-                          value!.isEmpty
-                              ? "Enter Your Name"
-                              : RegExp('[a-zA-Z]');
-                        },
                         label: AppString.address,
                         contoller: address,
                         keyboardType: TextInputType.text,
@@ -154,7 +149,11 @@ class _ProfileState extends State<Profile> {
                       //   const SnackBar(content: Text('Processing Data')),
                       // );
 
-                      Get.back(result: name.text);
+                      // Get.offNamed(Routes.appDrawer, arguments: name.text);
+                      print(name.text);
+                      Get.back(result: [
+                        {"name": name.text}
+                      ]);
                     }
                   },
                   style: ButtonStyle(

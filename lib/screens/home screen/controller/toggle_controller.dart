@@ -4,6 +4,7 @@ class boolcontrol extends GetxController {
   RxBool istoogle = false.obs;
   RxBool isLock = true.obs;
   RxBool isLightOn = false.obs;
+  var name;
 }
 
 class InitialBinding implements Bindings {

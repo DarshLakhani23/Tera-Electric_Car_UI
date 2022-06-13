@@ -1,3 +1,4 @@
+import 'package:carapp/screens/home%20screen/controller/toggle_controller.dart';
 import 'package:carapp/utils/app_string.dart';
 import 'package:carapp/utils/assets_utils.dart';
 import 'package:carapp/utils/colors_utils.dart';
@@ -9,8 +10,9 @@ import 'package:sizer/sizer.dart';
 
 class AppDrawer extends StatelessWidget {
   AppDrawer({Key? key}) : super(key: key);
-  var data = Get.arguments;
-
+  boolcontrol controller = Get.put(boolcontrol());
+  Map arg = Get.arguments ?? {};
+  // name = arg["name"];
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -103,6 +105,7 @@ class AppDrawer extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
+                  print(arg.toString());
                   Get.toNamed(Routes.maintenancePage);
                 },
                 child: SizedBox(

@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
   TextEditingController search = TextEditingController();
   var scaffoldFey = GlobalKey<ScaffoldState>();
   boolcontrol controller = Get.put(boolcontrol());
-  bool lock = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -131,6 +131,8 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   GestureDetector(
                     onTap: () {
+                      // Get.to(TimeInputField());
+                      // print(name);
                       Get.toNamed(Routes.rangeAssistant);
                     },
                     child: Row(
