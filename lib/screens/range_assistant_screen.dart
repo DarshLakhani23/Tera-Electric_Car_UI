@@ -30,39 +30,44 @@ class _RangeAssistantState extends State<RangeAssistant> {
                   fit: BoxFit.cover,
                   image: AssetImage(ImageAsset.mapImage),
                 )),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 2.h, horizontal: 6.w),
-                  child: Stack(
-                    children: [
-                      Row(
-                        children: [
-                          GestureDetector(
-                            child: const Icon(
-                              Icons.arrow_back_ios,
-                              color: Colors.white,
-                              size: 15,
+                child: Container(
+                  height: 50.h,
+                  color: Colors.black45,
+                  child: Padding(
+                    padding:
+                        EdgeInsets.symmetric(vertical: 2.h, horizontal: 6.w),
+                    child: Stack(
+                      children: [
+                        Row(
+                          children: [
+                            GestureDetector(
+                              child: const Icon(
+                                Icons.arrow_back_ios,
+                                color: Colors.white,
+                                size: 15,
+                              ),
+                              onTap: () {
+                                Get.back();
+                              },
                             ),
-                            onTap: () {
-                              Get.back();
-                            },
-                          ),
-                          Expanded(
-                            child: Text(
-                              AppString.rangeAssistant,
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 14.sp,
-                                  fontWeight: FontWeight.w600),
-                            ),
-                          )
-                        ],
-                      ),
-                      // Positioned(
-                      //   top: 10.h,
-                      //   child: SvgPicture.asset(ImageAsset.mapLine),
-                      // )
-                    ],
+                            Expanded(
+                              child: Text(
+                                AppString.rangeAssistant,
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14.sp,
+                                    fontWeight: FontWeight.w600),
+                              ),
+                            )
+                          ],
+                        ),
+                        // Positioned(
+                        //   top: 10.h,
+                        //   child: SvgPicture.asset(ImageAsset.mapLine),
+                        // )
+                      ],
+                    ),
                   ),
                 ),
               ),

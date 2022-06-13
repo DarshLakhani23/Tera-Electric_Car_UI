@@ -12,9 +12,10 @@ class AppDrawer extends StatelessWidget {
   AppDrawer({Key? key}) : super(key: key);
   boolcontrol controller = Get.put(boolcontrol());
   Map arg = Get.arguments ?? {};
-  // name = arg["name"];
+  var name;
   @override
   Widget build(BuildContext context) {
+    name = arg['name'];
     return Drawer(
       backgroundColor: AppColors.splashcolor,
       child: SafeArea(
@@ -24,6 +25,7 @@ class AppDrawer extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Text(Get.arguments.toString()),
               GestureDetector(
                   onTap: () {
                     Get.back();
@@ -105,7 +107,6 @@ class AppDrawer extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  print(arg.toString());
                   Get.toNamed(Routes.maintenancePage);
                 },
                 child: SizedBox(
@@ -179,5 +180,34 @@ class AppDrawer extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class Animation extends StatefulWidget {
+  const Animation({Key? key}) : super(key: key);
+
+  @override
+  State<Animation> createState() => _AnimationState();
+}
+
+class _AnimationState extends State<Animation>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(vsync: this);
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }

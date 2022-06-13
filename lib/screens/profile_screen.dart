@@ -144,17 +144,16 @@ class _ProfileState extends State<Profile> {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    if (formKey.currentState!.validate()) {
-                      // ScaffoldMessenger.of(context).showSnackBar(
-                      //   const SnackBar(content: Text('Processing Data')),
-                      // );
+                    // if (formKey.currentState!.validate()) {
+                    // ScaffoldMessenger.of(context).showSnackBar(
+                    //   const SnackBar(content: Text('Processing Data')),
+                    // );
 
-                      // Get.offNamed(Routes.appDrawer, arguments: name.text);
-                      print(name.text);
-                      Get.back(result: [
-                        {"name": name.text}
-                      ]);
-                    }
+                    // Get.offNamed(Routes.appDrawer);
+                    // arguments: {'name': name.text});
+                    print(name.text);
+                    Get.back();
+                    // }
                   },
                   style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all<Color>(
