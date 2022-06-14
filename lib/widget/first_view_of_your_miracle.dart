@@ -41,7 +41,7 @@ class FirstViewOfYourMiracle extends StatelessWidget {
                 boldText,
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 10.sp,
+                    fontSize: 11.sp,
                     fontWeight: FontWeight.w600),
               ),
               SizedBox(
@@ -67,7 +67,7 @@ class FirstViewOfYourMiracle extends StatelessWidget {
                 smallText,
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 8.sp,
+                  fontSize: 9.sp,
                 ),
               ),
             ],

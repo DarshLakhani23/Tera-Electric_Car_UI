@@ -49,62 +49,15 @@ class _YourMiracleState extends State<YourMiracle> {
                         flex: 5,
                         child: Column(
                           children: [
-                            Container(
-                              padding: EdgeInsets.fromLTRB(3.w, 1.h, 0.w, 2.h),
-                              decoration: BoxDecoration(
-                                color: Colors.white12,
-                                borderRadius: BorderRadius.circular(15),
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Row(
-                                    children: [
-                                      SvgPicture.asset(ImageAsset.lock),
-                                      SizedBox(
-                                        width: 3.w,
-                                      ),
-                                      Text(
-                                        AppString.unlocked,
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 10.sp,
-                                            fontWeight: FontWeight.w600),
-                                      ),
-                                      SizedBox(
-                                        height: 5.h,
-                                      ),
-                                    ],
-                                  ),
-                                  Row(
-                                    children: [
-                                      SizedBox(
-                                        height: 2.5.h,
-                                        child: FittedBox(
-                                          child: CupertinoSwitch(
-                                            activeColor: AppColors.textcolor,
-                                            value: controller.istoogle.value,
-                                            onChanged: (value) {
-                                              controller.istoogle.value =
-                                                  !controller.istoogle.value;
-                                            },
-                                          ),
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        width: 3.w,
-                                      ),
-                                      Text(
-                                        AppString.lock,
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 8.sp,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
+                            FirstViewOfYourMiracle(
+                              value: controller.istoogle.value,
+                              onTap: (value) {
+                                controller.istoogle.value =
+                                    !controller.istoogle.value;
+                              },
+                              svgImage: ImageAsset.lock,
+                              boldText: AppString.unlocked,
+                              smallText: AppString.lock,
                             ),
                             _battery(),
                             GestureDetector(
@@ -181,7 +134,7 @@ class _YourMiracleState extends State<YourMiracle> {
                 AppString.battery,
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 10.sp,
+                    fontSize: 11.sp,
                     fontWeight: FontWeight.w600),
               ),
               SizedBox(
@@ -189,13 +142,13 @@ class _YourMiracleState extends State<YourMiracle> {
               ),
               Image.asset(
                 ImageAsset.battery88,
-                height: 19.h,
+                height: 18.5.h,
               ),
               Text(
                 AppString.remaining,
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 8.sp,
+                  fontSize: 9.sp,
                 ),
               ),
               SizedBox(
@@ -224,16 +177,15 @@ class _YourMiracleState extends State<YourMiracle> {
           borderRadius: BorderRadius.circular(15),
         ),
         child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 1.2.h, horizontal: 2.w),
+          padding: EdgeInsets.symmetric(vertical: 2.h, horizontal: 3.w),
           child: Column(
-            //mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 AppString.temperature,
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 10.sp,
+                    fontSize: 11.sp,
                     fontWeight: FontWeight.w600),
               ),
               SizedBox(
@@ -243,12 +195,12 @@ class _YourMiracleState extends State<YourMiracle> {
                 AppString.outside,
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 8.sp,
+                    fontSize: 9.sp,
                     fontWeight: FontWeight.w500),
               ),
               Image.asset(
                 ImageAsset.speedometer,
-                height: 15.h,
+                height: 13.h,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

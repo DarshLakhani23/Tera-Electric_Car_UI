@@ -54,13 +54,13 @@ class _HomePageState extends State<HomePage> {
                         boxShadow: const [
                           BoxShadow(
                               offset: Offset(0, 2),
-                              blurRadius: 10,
+                              blurRadius: 8,
                               color: AppColors.circleavatar)
                         ]),
                     child: const Padding(
-                      padding: EdgeInsets.all(8),
+                      padding: EdgeInsets.all(6),
                       child: CircleAvatar(
-                        radius: 30,
+                        radius: 27,
                         child: Image(
                           image: AssetImage(ImageAsset.dp),
                         ),
@@ -78,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                     AppString.welcomeAron,
                     textAlign: TextAlign.start,
                     style:
-                        TextStyle(color: AppColors.textcolor, fontSize: 9.sp),
+                        TextStyle(color: AppColors.textcolor, fontSize: 10.sp),
                   ),
                   SizedBox(
                     height: 0.3.h,
@@ -94,7 +94,7 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
               SizedBox(
-                height: 2.h,
+                height: 3.h,
               ),
               Container(
                 height: 5.h,
@@ -178,7 +178,6 @@ class _HomePageState extends State<HomePage> {
                       padding: EdgeInsets.only(
                           left: 4.w, right: 10.w, top: 1.5.h, bottom: 1.5.h),
                       child: Column(
-                        //mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
@@ -193,7 +192,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                           Image.asset(
                             ImageAsset.battery88,
-                            height: 19.h,
+                            height: 20.h,
                           ),
                           Text(
                             AppString.remaining,

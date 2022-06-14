@@ -12,10 +12,8 @@ class AppDrawer extends StatelessWidget {
   AppDrawer({Key? key}) : super(key: key);
   boolcontrol controller = Get.put(boolcontrol());
   Map arg = Get.arguments ?? {};
-  var name;
   @override
   Widget build(BuildContext context) {
-    name = arg['name'];
     return Drawer(
       backgroundColor: AppColors.splashcolor,
       child: SafeArea(
@@ -43,15 +41,15 @@ class AppDrawer extends StatelessWidget {
                       color: Colors.black,
                       shape: BoxShape.circle,
                       border:
-                          Border.all(color: AppColors.circleavatar, width: 3),
+                          Border.all(color: AppColors.circleavatar, width: 2),
                       boxShadow: const [
                         BoxShadow(
                             offset: Offset(0, 2),
-                            blurRadius: 10,
+                            blurRadius: 5,
                             color: AppColors.circleavatar)
                       ]),
                   child: const Padding(
-                    padding: EdgeInsets.all(8),
+                    padding: EdgeInsets.all(7),
                     child: CircleAvatar(
                       radius: 30,
                       child: Image(
@@ -180,34 +178,5 @@ class AppDrawer extends StatelessWidget {
         ),
       ),
     );
-  }
-}
-
-class Animation extends StatefulWidget {
-  const Animation({Key? key}) : super(key: key);
-
-  @override
-  State<Animation> createState() => _AnimationState();
-}
-
-class _AnimationState extends State<Animation>
-    with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = AnimationController(vsync: this);
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }

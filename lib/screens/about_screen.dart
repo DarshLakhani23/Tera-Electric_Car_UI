@@ -21,9 +21,6 @@ class AboutScreen extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: 2.h, horizontal: 6.w),
           child: Column(
             children: [
-              SizedBox(
-                height: 1.h,
-              ),
               Flexible(
                 flex: 15,
                 child: Image.asset(ImageAsset.car4),
@@ -147,7 +144,7 @@ class AboutScreen extends StatelessWidget {
                   text1,
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 10.sp,
+                    fontSize: 11.sp,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
@@ -155,7 +152,7 @@ class AboutScreen extends StatelessWidget {
                   subtext1,
                   style: TextStyle(
                     color: Colors.white60,
-                    fontSize: 8.sp,
+                    fontSize: 9.sp,
                     fontWeight: FontWeight.w600,
                   ),
                 ),

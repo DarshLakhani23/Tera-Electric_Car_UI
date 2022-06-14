@@ -30,7 +30,7 @@ class Maintenance extends StatelessWidget {
                 text,
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 10.sp,
+                    fontSize: 11.sp,
                     fontWeight: FontWeight.w600),
               ),
               SizedBox(

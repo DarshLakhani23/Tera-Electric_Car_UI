@@ -100,7 +100,7 @@ class _RangeAssistantState extends State<RangeAssistant> {
                       children: [
                         Container(
                           padding:
-                              EdgeInsets.fromLTRB(0.5.w, 0.5.h, 7.w, 0.5.h),
+                              EdgeInsets.fromLTRB(0.5.w, 0.5.h, 5.w, 0.5.h),
                           decoration: BoxDecoration(
                             color: Colors.white12,
                             borderRadius: BorderRadius.circular(15),
@@ -116,7 +116,7 @@ class _RangeAssistantState extends State<RangeAssistant> {
                                   AppString.battery,
                                   style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 10.sp,
+                                      fontSize: 11.sp,
                                       fontWeight: FontWeight.w600),
                                 ),
                                 SizedBox(
@@ -130,12 +130,10 @@ class _RangeAssistantState extends State<RangeAssistant> {
                             ),
                           ),
                         ),
-                        SizedBox(
-                          width: 6.w,
-                        ),
+                        Spacer(),
                         Container(
                           padding:
-                              EdgeInsets.fromLTRB(0.5.w, 0.5.h, 7.w, 0.5.h),
+                              EdgeInsets.fromLTRB(0.5.w, 0.5.h, 5.w, 0.5.h),
                           decoration: BoxDecoration(
                             color: Colors.white12,
                             borderRadius: BorderRadius.circular(15),
@@ -144,14 +142,13 @@ class _RangeAssistantState extends State<RangeAssistant> {
                             padding: const EdgeInsets.symmetric(
                                 vertical: 15, horizontal: 22),
                             child: Column(
-                              //mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
                                   AppString.distanceLeft,
                                   style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 10.sp,
+                                      fontSize: 11.sp,
                                       fontWeight: FontWeight.w600),
                                 ),
                                 SizedBox(
@@ -171,7 +168,7 @@ class _RangeAssistantState extends State<RangeAssistant> {
                                   AppString.to0,
                                   style: TextStyle(
                                       color: Colors.white60,
-                                      fontSize: 8.sp,
+                                      fontSize: 9.sp,
                                       fontWeight: FontWeight.w500),
                                 ),
                                 SizedBox(

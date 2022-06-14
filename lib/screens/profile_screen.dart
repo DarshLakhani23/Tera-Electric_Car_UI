@@ -39,10 +39,10 @@ class _ProfileState extends State<Profile> {
             child: Column(
               children: [
                 SizedBox(
-                  height: 5.h,
+                  height: 4.h,
                 ),
                 SizedBox(
-                  height: 12.h,
+                  height: 13.h,
                   child: Stack(
                     children: [
                       Center(
@@ -51,17 +51,17 @@ class _ProfileState extends State<Profile> {
                               color: Colors.black,
                               shape: BoxShape.circle,
                               border: Border.all(
-                                  color: AppColors.circleavatar, width: 3),
+                                  color: AppColors.circleavatar, width: 1.5),
                               boxShadow: const [
                                 BoxShadow(
-                                    offset: Offset(0, 2),
-                                    blurRadius: 5,
+                                    offset: Offset(0, 0),
+                                    blurRadius: 4,
                                     color: AppColors.circleavatar)
                               ]),
                           child: const Padding(
-                            padding: EdgeInsets.all(5),
+                            padding: EdgeInsets.all(8),
                             child: CircleAvatar(
-                              radius: 45,
+                              radius: 35,
                               child: Image(
                                 image: AssetImage(ImageAsset.dp),
                               ),
@@ -70,15 +70,15 @@ class _ProfileState extends State<Profile> {
                         ),
                       ),
                       Positioned(
-                        top: 7.h,
-                        left: 50.w,
+                        top: 9.h,
+                        left: 47.w,
                         child: const CircleAvatar(
-                          radius: 15,
+                          radius: 12,
                           backgroundColor: AppColors.textcolor,
                           child: Icon(
                             Icons.edit,
                             color: Colors.white,
-                            size: 15,
+                            size: 14,
                           ),
                         ),
                       )
@@ -165,7 +165,7 @@ class _ProfileState extends State<Profile> {
                       style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.w600,
-                          fontSize: 10.sp),
+                          fontSize: 11.sp),
                     ),
                   ),
                 ),

@@ -49,7 +49,7 @@ class CustomTextField extends StatelessWidget {
               readOnly: readOnly,
               textAlign: TextAlign.start,
               cursorColor: Colors.white,
-              style: const TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.white, fontSize: 11.sp),
               keyboardType: keyboardType,
               textInputAction: textInputAction,
               decoration: InputDecoration(

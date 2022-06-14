@@ -54,7 +54,7 @@ class MaintenancePage extends StatelessWidget {
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w600,
-                        fontSize: 10.sp),
+                        fontSize: 11.sp),
                   ),
                   //tileColor: Colors.white,
                   leading: Padding(
@@ -63,7 +63,7 @@ class MaintenancePage extends StatelessWidget {
                   ),
                   subtitle: Text(
                     AppString.orIn,
-                    style: TextStyle(color: Colors.white, fontSize: 8.sp),
+                    style: TextStyle(color: Colors.white, fontSize: 9.sp),
                   ),
                   trailing: ElevatedButton(
                     onPressed: null,
@@ -75,7 +75,7 @@ class MaintenancePage extends StatelessWidget {
                       style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.w600,
-                          fontSize: 8.sp),
+                          fontSize: 9.sp),
                     ),
                   ),
                 ),
@@ -99,7 +99,7 @@ class MaintenancePage extends StatelessWidget {
                       style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.w600,
-                          fontSize: 10.sp),
+                          fontSize: 11.sp),
                     ),
                     //tileColor: Colors.white,
                     leading: Padding(
@@ -108,7 +108,7 @@ class MaintenancePage extends StatelessWidget {
                     ),
                     subtitle: Text(
                       AppString.phoneNumber,
-                      style: TextStyle(color: Colors.white, fontSize: 8.sp),
+                      style: TextStyle(color: Colors.white, fontSize: 9.sp),
                     ),
                   ),
                 ),
